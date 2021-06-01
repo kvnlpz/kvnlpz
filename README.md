@@ -2,12 +2,12 @@
 
 
 <ul>
-<li>🔭 I’m currently working on an Android app</li>
-<li> 🌱 I’m currently learning JavaScript, Python</li>
-<li> 👯 I’m looking to collaborate on open source Android projects!</li>
-<li> 🤔 I’m looking for help with my own Android App</li>
+<li>🔭 I’m currently in my last semester</li>
+<li> 🌱 I’m currently learning Python</li>
+<li> 👯 I’m looking to collaborate on open source Android projects, or any projects really!</li>
+<li> 🤔 I’m looking for help with: finding a job!</li>
 <li> 💬 Ask me about: anything you want</li>
-<li> 📫 How to reach me: twitter: @kevinn________</li>
+<li> 📫 How to reach me: Instagram: @kevinn________, that's 8 underscores 😅 </li>
 <li> 😄 Pronouns: anything</li>
 <li> ⚡ Fun fact: I have no fun facts</li>
 </ul>
