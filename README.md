@@ -5,9 +5,8 @@
 <li>🔭 I’m currently in my last semester</li>
 <li> 🌱 I’m currently learning Python</li>
 <li> 👯 I’m looking to collaborate on open source Android projects, or any projects really!</li>
-<li> 🤔 I’m looking for help with: finding a job, kinda nervous...</li>
 <li> 💬 Ask me about: anything you want</li>
-<li> 📫 How to reach me: Twitter maybe?: @kvnlpz, I used to use it more, might again... unless? </li>
+<li> 📫 How to reach me: Twitter maybe?: Just email me, I don't use social media much really. </li>
 <li> ⚡ Fun fact: I'm bad at these 😅</li>
 </ul>
 
