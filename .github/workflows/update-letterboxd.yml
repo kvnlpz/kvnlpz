@@ -1,0 +1,50 @@
+# .github/workflows/update-letterboxd.yml
+#
+# Updates the "Recently Watched" section of README.md from the Letterboxd RSS feed.
+# Runs daily at 12:00 UTC and on manual trigger from the Actions tab.
+name: Update Letterboxd diary
+
+on:
+  schedule:
+    # Cron is always UTC. Noon UTC = 4am Pacific (Standard) / 5am Pacific (Daylight).
+    - cron: '0 12 * * *'
+  workflow_dispatch:  # allows manual runs from the GitHub Actions UI
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    permissions:
+      # Needed so the built-in GITHUB_TOKEN can push the README update.
+      contents: write
+    steps:
+      - name: Check out repo
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        # fast-xml-parser is the only dependency. Pinning the version so future
+        # bumps are deliberate.
+        run: npm install fast-xml-parser@4.5.0
+
+      - name: Run updater
+        run: node scripts/update-letterboxd.js
+
+      - name: Commit and push if README changed
+        run: |
+          # Bot identity for the commit. Using the github-actions[bot] noreply email.
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+
+          # Skip cleanly if nothing actually changed.
+          if git diff --quiet README.md; then
+            echo "README unchanged. Nothing to commit."
+            exit 0
+          fi
+
+          git add README.md
+          git commit -m "chore(readme): update Letterboxd diary"
+          git push
