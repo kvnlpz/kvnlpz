@@ -42,7 +42,7 @@ Outside of code, I watch movies, play games when I have the bandwidth, and feed 
 ## 🎬 Recently Watched
 
 <!-- NOW:START -->
-_Loading from Letterboxd..._
+_Nothing logged yet. Check back soon._
 <!-- NOW:END -->
 
 ## 📊 Stats
